@@ -24,6 +24,17 @@
         window.save = (password) => {
             console.log(password);
         };
+
+        function copyToClipboard() {
+            var copyText = document.getElementById("generated-password");
+
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+
+            document.execCommand("copy");
+
+            alert("Password copied to clipboard");
+        }
     </script>
 </body>
 

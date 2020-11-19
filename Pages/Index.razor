@@ -30,8 +30,10 @@ Here you can generate some passwords <br>
 <br>
 
 <p class="text-center">
-    <span class="generated-password">@GeneratedPassword</span> <br>
-    <a href="#">copy to clipboard</a>
+    <input class="generated-password" type="text" name="generated-password" id="generated-password"
+        @bind-value="GeneratedPassword">
+    <br>
+    <a href="#" onclick="copyToClipboard()">copy to clipboard</a>
 </p>
 
 @code {
