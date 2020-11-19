@@ -1,0 +1,15 @@
+{
+  "name": "My Vault",
+  "short_name": "My Vault",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#171717",
+  "theme_color": "#F8C404",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
