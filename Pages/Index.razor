@@ -46,6 +46,7 @@ Here you can generate some passwords <br>
     public async Task Generate()
     {
         GeneratedPassword = Password.Generate(Length, IncludeSpecialCharacters, OnlyUpperCase);
-        await JS.InvokeAsync<string>("save", GeneratedPassword);
+        if (StoreLocally)
+            await JS.InvokeAsync<string>("save", GeneratedPassword);
     }
 }

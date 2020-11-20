@@ -22,7 +22,18 @@
     <script>navigator.serviceWorker.register('service-worker.js');</script>
     <script>
         window.save = (password) => {
-            console.log(password);
+            var data = load();
+            if (!data)
+                data = [];
+
+            data.push(password);
+            localStorage.setItem('passwords', JSON.stringify(data));
+        };
+
+        window.load = () => {
+            var data = localStorage.getItem('passwords');
+            if (data)
+                return JSON.parse(data);
         };
 
         function copyToClipboard() {
